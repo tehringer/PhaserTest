@@ -17,8 +17,15 @@ var Player = /** @class */ (function (_super) {
     }
     return Player;
 }(Phaser.Sprite));
+var imageMappings;
+(function (imageMappings) {
+    imageMappings.images = [
+        ["logo", 'res/phaser-logo-small.png'],
+    ];
+})(imageMappings || (imageMappings = {}));
 /// <reference path="phaser.d.ts" />
 /// <reference path="player.ts" />
+/// <reference path="image-map.ts" />
 var GAME;
 var GensGame;
 (function (GensGame) {
@@ -27,13 +34,12 @@ var GensGame;
     }
     GensGame.start = start;
     function preload() {
-        GAME.load.image('logo', 'res/phaser-logo-small.png');
+        imageMappings.images.forEach(function (a) { return GAME.load.image(a[0], a[1]); });
     }
     function create() {
         var logo = GAME.add.existing(new Player(GAME.world.centerX, GAME.world.centerY));
         logo.anchor.setTo(0.5, 0.5);
         logo.scale.setTo(0.2, 0.2);
-        logo.scale.setTo(0.1, 0.1);
         GAME.add.tween(logo.scale).to({ x: 1, y: 1 }, 2000, Phaser.Easing.Bounce.Out, true);
     }
 })(GensGame || (GensGame = {}));
