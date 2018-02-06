@@ -1,8 +1,8 @@
 ﻿/// <reference path="phaser.d.ts" />
 
-export namespace GensGame {
+namespace GensGame {
 
-    export var game: Phaser.Game;
+    var game: Phaser.Game;
 
     export function start() {
         game = new Phaser.Game(1280, 720, Phaser.AUTO, 'content', { preload: preload, create: create });
