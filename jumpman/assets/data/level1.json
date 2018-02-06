@@ -1,0 +1,19 @@
+{
+	"playerStart": {"x": 100, "y": 600},
+		
+	"platformData": [
+			{"x": 0, "y": 250},
+			{"x": 400, "y": 375}
+		],
+	
+	"fireData": [
+			{"x": 200, "y": 225},
+			{"x": 125, "y": 510},
+			{"x": 400, "y": 700}
+		],
+	
+	"goal": {"x": 50, "y": 200},
+	
+	"movingObstacleFrequency": 5,
+	"movingObstacleSpeed": 150
+}
