@@ -25,7 +25,7 @@ var imageMappings;
 })(imageMappings || (imageMappings = {}));
 /// <reference path="phaser.d.ts" />
 /// <reference path="player.ts" />
-/// <reference path="image-map.ts" />
+/// <reference path="res/image-map.ts" />
 var GAME;
 var GensGame;
 (function (GensGame) {
