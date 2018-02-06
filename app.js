@@ -1,6 +1,6 @@
 "use strict";
 /// <reference path="phaser.d.ts" />
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var GensGame;
 (function (GensGame) {
     function start() {
